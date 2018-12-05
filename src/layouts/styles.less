@@ -1,0 +1,191 @@
+// https://github.com/ant-design/ant-design/blob/master/components/style/themes/default.less
+@import '~antd/lib/style/themes/default.less';
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.root {
+    min-height: 100vh;
+}
+
+// footer
+.footer {
+    text-align: center;
+    background: transparent;
+}
+
+:global {
+    .ant-menu-root.ant-menu-vertical,
+    .ant-menu-root.ant-menu-vertical-left,
+    .ant-menu-root.ant-menu-vertical-right,
+    .ant-menu-root.ant-menu-inline {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    .ant-menu-submenu-popup,
+    .ant-menu-submenu-popup .ant-menu-sub {
+        background: #00000066 !important;
+    }
+    .ant-menu-item-selected {
+        background-color: fade(#fff, 20%) !important;
+    }
+}
+// sider
+.sider {
+    // position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background: #000 url('../assets/sidebar-4.jpg') 0 / cover;
+    .logo {
+        height: 64px;
+        margin: 0 16px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        a {
+            display: flex;
+            align-items: center;
+        }
+        img {
+            height: 48px;
+            margin-right: 4px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+            white-space: nowrap;
+        }
+        // &.collapsed {
+        //     h1 {
+        //         opacity: 0;
+        //     }
+        // }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            opacity: 0.2;
+            height: 1px;
+            width: 100%;
+            background-color: #fff;
+        }
+    }
+    :global {
+        .ant-menu-root.ant-menu-vertical,
+        .ant-menu-root.ant-menu-vertical-left,
+        .ant-menu-root.ant-menu-vertical-right,
+        .ant-menu-root.ant-menu-inline {
+            box-shadow: none;
+        }
+        .ant-menu-submenu-open .ant-menu-sub {
+            animation: fadeInLeft 0.5s 1;
+            animation-fill-mode: forwards;
+        }
+        .ant-layout-sider-children {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .ant-menu-dark,
+        .ant-menu-dark .ant-menu-sub,
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+            background: transparent;
+        }
+        .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+            box-shadow: none;
+        }
+        .ant-menu-submenu-title,
+        .ant-menu-item {
+            position: relative;
+            span,
+            a,
+            i {
+                position: relative;
+                z-index: 2;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                transition: all 0.1s linear;
+                transform: none;
+                background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+                z-index: 1;
+                opacity: 0.2;
+            }
+        }
+    }
+}
+
+// header
+.header {
+    background: #fff;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .action {
+        cursor: pointer;
+        padding: 0 12px;
+        display: inline-block;
+        transition: all 0.3s;
+        height: 100%;
+        > i {
+            color: @text-color;
+        }
+        &:hover {
+            background: @primary-1;
+        }
+    }
+
+    .left {
+        .action {
+            font-size: 18px;
+            padding: 0 24px;
+        }
+    }
+    .right {
+        margin-right: 10px;
+        .action {
+            padding: 0 12px;
+            > i {
+                font-size: 16px;
+            }
+        }
+        .account {
+            i {
+                margin-right: 4px;
+            }
+            .avatar {
+                margin: 20px 8px 20px 0;
+                color: @primary-color;
+                background: rgba(255, 255, 255, 0.85);
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+// content
+.content {
+    padding: 24px 32px 0 32px;
+}

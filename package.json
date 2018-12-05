@@ -1,0 +1,30 @@
+{
+    "name": "baiyezi-factory",
+    "version": "0.0.1",
+    "description": "基于umi,dva,antd的项目骨架",
+    "main": "index.js",
+    "repository": "git@github.com:662/baiyezi-factory.git",
+    "author": "Meeko <lya121@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "start": "umi dev",
+        "build": "umi build",
+        "test": "umi test",
+        "lint": "eslint --ext .js src",
+        "precommit": "lint-staged"
+    },
+    "dependencies": {
+        "dva-model-extend": "^0.1.2",
+        "umi": "^2.2.7",
+        "umi-plugin-react": "^1.2.3"
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "engines": {
+        "node": ">=8.0.0"
+    }
+}
