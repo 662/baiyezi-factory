@@ -2,6 +2,8 @@ import { resolve } from 'path';
 
 // ref: https://umijs.org/config/
 export default {
+    // 指定 react-router 的 base，部署到非根目录时需要配置
+    base: 'baiyezi-factory',
     plugins: [
         // ref: https://umijs.org/plugin/umi-plugin-react.html
         [
