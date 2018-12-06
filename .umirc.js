@@ -4,7 +4,7 @@ import { resolve } from 'path';
 export default {
     // 指定 react-router 的 base，部署到非根目录时需要配置
     base: 'baiyezi-factory',
-    publicPath: '/baiyezi-factory/static/',
+    publicPath: '/baiyezi-factory/',
     plugins: [
         // ref: https://umijs.org/plugin/umi-plugin-react.html
         [
