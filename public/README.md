@@ -1,5 +1,5 @@
 # baiyezi-factory
-基于umi,dva,antd的项目骨架
+基于umi,dva,antd的项目骨架，源代码在 _source_ 分支，master用于github pages预览的，是 _source_ 分支构建之后的产物
 
 ### 注意
 
