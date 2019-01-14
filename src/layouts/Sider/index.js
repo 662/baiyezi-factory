@@ -13,7 +13,7 @@ export default class GSider extends PureComponent {
             <Layout.Sider className={styles.sider} trigger={null} collapsible collapsed={collapsed} width="240">
                 <div className={classnames(styles.logo, { [`${styles.collapsed}`]: collapsed })}>
                     <Link to="/">
-                        <img alt="Workaholic" src={logo} />
+                        {/* <img alt="Workaholic" src={logo} /> */}
                         <h1>白叶子</h1>
                     </Link>
                 </div>
